@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BugSmasher", "BugSmasher.csproj", "{D178BFE6-7E0E-4847-B32C-EE869A40C897}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFDataRepository", "..\EFDataRepository\EFDataRepository.csproj", "{9BAD18BA-BF9D-4046-8E4D-ADDF0F126753}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFDataRepository", "..\EFDataRepository\EFDataRepository.csproj", "{9BAD18BA-BF9D-4046-8E4D-ADDF0F126753}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBModels", "..\DBModels\DBModels.csproj", "{3012AA67-85AC-48BF-ACA9-331570BA1DD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "..\DBModels\Core.csproj", "{3012AA67-85AC-48BF-ACA9-331570BA1DD6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

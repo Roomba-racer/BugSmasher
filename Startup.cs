@@ -10,6 +10,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using EFDataRepository.DataAccess;
 using EFDataRepository.Interfaces;
+using EFDataRepository.Repositories;
+using Core.RepInterfaces;
+using Core.Models;
+using System.Data.Common;
 
 namespace BugSmasher
 {
@@ -19,12 +23,13 @@ namespace BugSmasher
         {
             Configuration = configuration;
         }
-
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IUnitOfWork>(provide => new UnitOfWork(new BugSmasherContextFactory()
+                .CreateNewBugSmasherContext("Data Source=MARK\\TRAINING;Initial catalog = BugSmasher;Integrated Security=True;"))); // Watch out for this !!! Check for memory leak and disposing !!!
             services.AddScoped<IBugSmasherContext, BugSmasherContextFactory>();
             services.AddControllersWithViews();
         }
