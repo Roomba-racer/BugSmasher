@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Core.Models;
 using Core.RepInterfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,38 +10,51 @@ namespace BugSmasher.Controllers.API
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProjectsController : ControllerBase
+    public class UsersController : ControllerBase
     {
         private readonly IUnitOfWork worker;
 
-        public ProjectsController(IUnitOfWork worker)
+        public UsersController(IUnitOfWork worker)
         {
             this.worker = worker;
         }
 
-        // GET: api/Projects
+        // GET: api/Users
         [HttpGet]
-        public IEnumerable<Project> Get()
+        public IEnumerable<string> GetUser()
         {
-            var projectName = worker.Projects.GetAll();
-            return projectName;
-            //return new string[] { "value1", "value2" };
+            //var user = worker.Users.GetUserById(1);
+            //var userDTO = new List<UserDTO>();
+            //foreach (var u in user)
+            //{
+            //    userDTO.Add(new UserDTO
+            //    {
+            //        Id = u.Id,
+            //        Username = u.Username,
+            //        FirstName = u.FirstName,
+            //        LastName = u.LastName,
+            //        UserType = u.UserType.Name,
+
+            //    });
+            //}
+            //return (userDTO);
+            return new string[] { "value1", "value2" };
         }
 
-        // GET: api/Projects/5
+        // GET: api/Users/5
         [HttpGet("{id}", Name = "Get")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST: api/Projects
+        // POST: api/Users
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT: api/Projects/5
+        // PUT: api/Users/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {

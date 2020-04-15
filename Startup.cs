@@ -12,7 +12,6 @@ using EFDataRepository.DataAccess;
 using EFDataRepository.Interfaces;
 using EFDataRepository.Repositories;
 using Core.RepInterfaces;
-using Core.Models;
 using System.Data.Common;
 
 namespace BugSmasher
