@@ -2,77 +2,196 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="login-form ">
-    <form action="" method="post">
-        <h2 class="text-center text-white">Sign in</h2>
-        <div class="form-group">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input type="text" class="form-control" name="username" placeholder="Username" required="required">
+<div class="row">
+    <div class="login-form col-xm-6 text-center" id="login_form">
+        <form action="" method="post">
+            <h2 class="text-center text-white">Sign in</h2>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input type="text" class="form-control" name="username" placeholder="Username" required="required">
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary login-btn btn-block">Log-in</button>
-        </div>
-        <div class="clearfix">
-            <a href="#" class="pull-right">Create Demo-Account</a> <br />
-            <a href="#" class="pull-right">Forgot Password ?</a>
-        </div>
-        <div class="separator"></div>
-        <p class="text-center text-white">Sign in with social networks account</p>
-        <div class="text-center social-btn">
-            <a href="#" class="btn btn-primary"><i class="fa fa-facebook"></i>Facebook</a>
-            <a href="#" class="btn btn-info"><i class="fa fa-twitter"></i>Twitter</a>
-            <a href="#" class="btn btn-danger"><i class="fa fa-google"></i>Google</a>
-        </div>
-    </form>
-    <p class="text-center text-muted small">Don't have an account? <a href="#">Sign up here!</a></p>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary login-btn btn-block">Log-in</button>
+            </div>
+            <div class="clearfix">
+                <a href="#" class="pull-right" id="move_left">Create Demo-Account</a> <br />
+                <a href="#" class="pull-right">Forgot Password ?</a>
+            </div>
+            <div class="separator"></div>
+            <p class="text-center text-white">Sign in with social networks account</p>
+            <div class="text-center social-btn">
+                <a href="#" class="btn btn-primary"><i class="fa fa-facebook"></i>Facebook</a>
+                <a href="#" class="btn btn-info"><i class="fa fa-twitter"></i>Twitter</a>
+                <a href="#" class="btn btn-danger"><i class="fa fa-google"></i>Google</a>
+            </div>
+        </form>
+        <p class="text-center text-muted small" id="reg_button">Don't have an account? <a href="#">Sign up here!</a></p>
+    </div>
+
+    <div class="login-form col-xm-6 text-center" id="registration_form">
+        <form action="" method="post">
+            <h2 class="text-center text-white">Registration</h2>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type="text" class="form-control" name="FirstName" placeholder="First Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type="text" class="form-control" name="LastName" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input type="text" class="form-control" name="username" placeholder="Username" required="required">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type="password" class="form-control" name="confirmed_password" placeholder="Confirm Password" required="required">
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary login-btn btn-block">Submit</button>
+            </div>
+
+        </form>
+        <p class="text-center text-muted small" id="sign_button">Already registered ? <a href="#">Log in here!</a></p>
+    </div>
 </div>
 
-<div class="login-form ">
-    <form action="" method="post">
-        <h2 class="text-center text-white">Registration</h2>
-        <div class="form-group">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                <input type="text" class="form-control" name="FirstName" placeholder="First Name" >
-            </div>
+@*<div class="login-form ">
+            <form action="" method="post">
+                <h2 class="text-center text-white">Sign in</h2>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input type="text" class="form-control" name="username" placeholder="Username" required="required">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary login-btn btn-block">Log-in</button>
+                </div>
+                <div class="clearfix">
+                    <a href="#" class="pull-right">Create Demo-Account</a> <br />
+                    <a href="#" class="pull-right">Forgot Password ?</a>
+                </div>
+                <div class="separator"></div>
+                <p class="text-center text-white">Sign in with social networks account</p>
+                <div class="text-center social-btn">
+                    <a href="#" class="btn btn-primary"><i class="fa fa-facebook"></i>Facebook</a>
+                    <a href="#" class="btn btn-info"><i class="fa fa-twitter"></i>Twitter</a>
+                    <a href="#" class="btn btn-danger"><i class="fa fa-google"></i>Google</a>
+                </div>
+            </form>
+            <p class="text-center text-muted small">Don't have an account? <a href="#">Sign up here!</a></p>
         </div>
-        <div class="form-group">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                <input type="text" class="form-control" name="LastName" placeholder="Last Name">
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                <input type="email" class="form-control" name="email" placeholder="Email" required="required">
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input type="text" class="form-control" name="username" placeholder="Username" required="required">
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                <input type="password" class="form-control" name="password" placeholder="Password" required="required">
-            </div>
-        </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary login-btn btn-block">Submit</button>
-        </div>
-       
-    </form>
-    <p class="text-center text-muted small">Already registered ? <a href="#">Log in here!</a></p>
-</div>
 
+    <div class="login-form ">
+            <form action="" method="post">
+                <h2 class="text-center text-white">Registration</h2>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <input type="text" class="form-control" name="FirstName" placeholder="First Name" >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <input type="text" class="form-control" name="LastName" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input type="text" class="form-control" name="username" placeholder="Username" required="required">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary login-btn btn-block">Submit</button>
+                </div>
+
+            </form>
+            <p class="text-center text-muted small">Already registered ? <a href="#">Log in here!</a></p>
+        </div>*@
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#registration_form").hide();
+            $("#reg_button").click(function () {
+                $("#login_form").fadeOut("fast", function () {
+                    $("#registration_form").fadeIn("fast");
+                })
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('#sign_button').click(function () {
+                $('#registration_form').fadeOut('fast', function () {
+                    $('#login_form').fadeIn('fast');
+                })
+            });
+        });
+    </script>
+
+
+
+    <script>
+        //$("#right").click(function () {
+        //    $(".block").animate({ "left": "+=50px" }, "slow");
+        //});
+
+        $("#move_left").click(function () {
+            $("#login_form").animate({ "left": "-=300px" }, "slow");
+        });
+    </script>
+
+
+}
