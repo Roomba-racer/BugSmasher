@@ -1,0 +1,74 @@
+﻿
+/*---BODY START---*/
+
+.background {
+	height: 100vh;
+	min-height: 500px;
+	background-image: url('/images/landing-bg.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/*---BODY END---*/
+
+.navbar {
+	background-color: #2C4257 !important;
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.5) !important;
+	color: aliceblue !important;
+	padding-bottom: 0px !important;
+	padding: 0px !important;
+}
+
+/*---LOGIN FORM START---*/
+
+	.login-form {
+		width: 385px;
+		margin: 30px auto;
+	}
+		.login-form form {
+			margin-bottom: 12px;
+			background: rgba(3, 28, 48, 0.39);
+			padding: 30px;
+			box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+		}
+	.login-form h2 {
+		margin: 0 0 15px;
+	}
+	.form-control, .login-btn {
+		min-height: 38px;
+		border-radius: 2px;
+	}
+	.input-group-addon .fa {
+		font-size: 18px;
+	}
+	.login-btn {
+		font-size: 15px;
+		font-weight: bold;
+	}
+	.social-btn .btn {
+		border: none;
+		margin: 10px 3px 0;
+		opacity: 1;
+	}
+	.social-btn .btn:hover {
+		opacity: 0.9;
+	}
+	.social-btn .btn-primary {
+		background: #507cc0;
+	}
+	.social-btn .btn-info {
+		background: #0d68f8;
+	}
+	.social-btn .btn-danger {
+		background: #df4930;
+	}
+	.separator {
+		margin-top: 20px;
+		text-align: center;
+		border-top: 1px solid #ccc;
+
+	}
+	  
+
+/*---LOGIN FORM END---*/

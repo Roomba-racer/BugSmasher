@@ -17,6 +17,10 @@
     <ProjectReference Include="..\DBModels\Core.csproj" />
     <ProjectReference Include="..\EFDataRepository\EFDataRepository.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
   
 
 </Project>
