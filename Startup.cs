@@ -13,6 +13,10 @@ using EFDataRepository.Interfaces;
 using EFDataRepository.Repositories;
 using Core.RepInterfaces;
 using System.Data.Common;
+using Core.Models;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace BugSmasher
 {
@@ -27,8 +31,12 @@ namespace BugSmasher
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<BugSmasherContext>(options => options.UseSqlServer(Configuration.GetConnectionString("connectionString")));
+            services.AddIdentity<ApplicationUser, ApplicationUserRole>().AddEntityFrameworkStores<BugSmasherContext>().AddDefaultTokenProviders();
+            services.AddMvc();
+
             services.AddScoped<IUnitOfWork>(provide => new UnitOfWork(new BugSmasherContextFactory()
-                .CreateNewBugSmasherContext("Data Source=MARK\\TRAINING;Initial catalog = BugSmasher;Integrated Security=True;"))); // Watch out for this !!! Check for memory leak and disposing !!!
+                .CreateNewBugSmasherContext(Configuration.GetConnectionString("connectionString")))); // Watch out for this !!! Check for memory leak and disposing !!!
             services.AddScoped<IBugSmasherContext, BugSmasherContextFactory>();
             services.AddControllersWithViews();
         }
@@ -49,6 +57,7 @@ namespace BugSmasher
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
+            app.UseAuthentication();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
